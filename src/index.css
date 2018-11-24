@@ -12,3 +12,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-gap:0.5em;
+  margin-top:50px;
+  margin-left: 10px;
+}
+
+.carousel{
+  display: grid;
+  grid-template-columns: 18% auto;
+  grid-gap: 1em;
+  min-height: 500px
+}
+.imageGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  position: relative;
+}
+.activeImage{
+  align-self: center;
+  position: relative;
+}
+
+.sizebox{
+  display :flex;
+}
+
+.backArrow {
+  position: absolute;
+  top: 50%; /* pushes the icon in the middle of the height */
+  z-index: 5;
+  display: inline-block;
+  margin:2%;
+}
+.nextArrow{
+  position: absolute;
+  top: 50%; /* pushes the icon in the middle of the height */
+  right:0;
+  z-index: 5;
+  display: inline-block;
+  margin:2%;
+}
+.Infobar{
+text-align: left;
+margin :0 2%;
+}
+.sizeIcons{
+  border-radius: 50%;
+  border-color: #6b6a6a;
+  border-width: 2px;
+  border-style: solid;
+  width:70px;
+  margin:0 10px;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    margin-left: 0px
+  }
+  .carousel{
+    grid-template-columns:0% 100%;
+    grid-gap: 0;
+  }
+}
