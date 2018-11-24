@@ -1,22 +1,26 @@
 import React from "react";
+import { Container, Segment, Button } from "semantic-ui-react";
+import SizeDropdown from "./sizeDropdown";
+import Picker from "./datepicker";
 
 const Infobar = props => {
   return props.details ? (
     <div className="Infobar">
       <div className="heading">
-        <div className="title">{props.details.title}</div>
+        <h3 className="title">{props.details.title}</h3>
         <div className="description">{props.details.description}</div>
       </div>
-      <hr />
       <div className="money">
-        <h2 className="price">
-          <i class="fa fa-inr" /> 
-          {props.details.price}
-        </h2>
-        <div className="rental">Rental for 4 days</div>
+        <div>
+          <h2 className="price">
+            <i className="fa fa-inr" />
+            {" " + props.details.price}
+          </h2>
+          <div className="rental">Rental for 4 days</div>
+        </div>
         <div className="Value">
           {" "}
-          Value <i class="fa fa-inr" /> 18000{" "}
+          Value <i className="fa fa-inr" /> 18000{" "}
         </div>
       </div>
       <hr />
@@ -28,17 +32,20 @@ const Infobar = props => {
             alt=""
             style={{ width: "25px" }}
           />
-          Get 1080 Cashback. Use code 'SAVE30' at checkout
+          Get <strong>1080</strong> Cashback. Use code <strong>'SAVE30'</strong>{" "}
+          at checkout
         </div>
         <div className="refund">
           Refundable deposit:
-          <i class="fa fa-inr" />
-          3000{" "}
+          <strong>
+            <i className="fa fa-inr" />
+            3000{" "}
+          </strong>
         </div>
       </div>
       <hr />
       <div>
-        <span>Know your size</span>
+        <div className="sizeHeading">Know your size</div>
         <div className="sizebox">
           <div>
             <img
@@ -62,6 +69,21 @@ const Infobar = props => {
             <div>Flat</div>
           </div>
         </div>
+        <div className="dropdown">
+        <SizeDropdown />
+      </div>
+      </div>
+
+      <div className="date">
+        <div className="deliveryHeading">Pick a delivery date</div>
+        <div className="picker"><Picker /></div>
+      </div>
+      
+      <div style={{ display: "flex" }}>
+        <Button color="blue" fluid>
+          Add to Cart
+        </Button>
+        <Button fluid>Add to Wishlist</Button>
       </div>
     </div>
   ) : null;

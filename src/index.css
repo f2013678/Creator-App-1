@@ -70,6 +70,57 @@ margin :0 2%;
   width:70px;
   margin:0 10px;
 }
+
+.offers div{
+  margin-top:5%;
+}
+.description{
+  color: #6b6a6a;
+  font-style: italic;
+}
+.money{
+  margin:5% 0;
+}
+
+.title{
+  margin:0px
+}
+.heading{
+  margin:10% 5% 10% 0;
+}
+.offers span{
+  color:rgb(68, 173, 68);
+  font-size: 1.3em
+}
+h2.price{
+  margin:0px
+}
+.money{
+  display: -webkit-flex;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.sizebox{
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.sizeHeading{
+  font-size: 1.2em;
+  margin: 2% 2%;
+}
+.date{
+  font-size: 1.2em
+}
+.picker{
+  margin:10px;
+}
+.dropdown{
+  margin:2% 0
+}
 @media only screen and (max-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr;
